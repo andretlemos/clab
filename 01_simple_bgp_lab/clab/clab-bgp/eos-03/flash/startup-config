@@ -1,0 +1,65 @@
+! Startup-config last modified at Tue Apr  8 15:11:57 2025 by admin
+! device: eos-03 (cEOSLab, EOS-4.33.2F-40713977.4332F (engineering build))
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$0AySdrCluKcU0aMU$Zsu82qqawby.z0nqnecoK7ErqcLrwbBtKfNfT8IIu4dfW6nW1KOBk2WZpESyICpJ363YZyJjRcla0sSB8ZwfF0
+!
+management api http-commands
+   no shutdown
+!
+no service interface inactive port-id allocation disabled
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model multi-agent
+!
+hostname eos-03
+!
+spanning-tree mode mstp
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+management api gnmi
+   transport grpc default
+!
+management api netconf
+   transport ssh default
+!
+interface Ethernet1
+   description eos-01
+   no switchport
+   ip address 12.12.12.2/24
+!
+interface Ethernet2
+   description eos-02
+   no switchport
+   ip address 12.12.13.2/24
+!
+interface Ethernet3
+   description eos-03
+   no switchport
+   ip address 12.12.14.2/24
+!
+interface Management0
+   ip address 192.168.100.13/24
+!
+ip routing
+!
+ip route 0.0.0.0/0 192.168.100.1
+!
+router bgp 200
+   neighbor 12.12.12.1 remote-as 1000
+   neighbor 12.12.13.1 remote-as 100
+   neighbor 12.12.14.1 remote-as 2000
+!
+router multicast
+   ipv4
+      software-forwarding kernel
+   !
+   ipv6
+      software-forwarding kernel
+!
+end

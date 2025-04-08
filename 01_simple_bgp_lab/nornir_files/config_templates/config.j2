@@ -1,0 +1,20 @@
+ip routing
+!
+{% for interface in interfaces%}
+interface {{ interface.name }}
+ no switchport
+ description {{ interface.description }}
+ ip address {{ interface.ip }}
+ no shut
+!
+{% endfor %}
+router bgp {{ bgp.asn }}
+{% for neighbour in bgp.neighbours  %}
+ neighbor {{ neighbour.ip }} remote-as {{ neighbour.asn }}
+{% endfor %}
+{% if prefixes %}
+{% for prefix in prefixes %}
+ network {{ prefix.ip }} mask {{ prefix.mask }}
+{% endfor %}
+{% endif %}
+end

@@ -1,0 +1,188 @@
+{
+  "name": "bgp",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "mgmt",
+        "bridge": "br-6794f08eaa3a",
+        "ipv4-subnet": "192.168.100.0/24",
+        "ipv4-gw": "192.168.100.1",
+        "ipv6-gw": "fe80::386f:50ff:fe8c:4680",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDi+xYINIEPU5bff7pVxGmx+vVu/dJWjs0ioPzLttOPmaXZDNsQFju8PPHYkF5hLfKbKB1PGEGNRAJjGfiLVCOwoQhJoC4PlFnO5V5/MwSYCn12SIc74wGCkfe1QVKhtKvDfXw+/8QpGb6DjeMk7hV2KmKgI3il9x2+Jw0xH8qRW4Wk4dHlq5OXlrPIWnS3g62Iugac1lWenbVzqFt+F9D473dnEj2MxZYfgp1fKfNR74ZsXI+SKuJoGeTIzUHHyMuVMEYNC/MeZVftG/j9RCmZ+epuae28xQyNTC3W2icKQpA+PIbx8Qu2/lKl0uE7E5QDCSq7cjpzZ/2badRX0ojzJs/wC9dLSdoIsXMq0+is5clb/ha8ZFB48Fpn5KeBQfiXWoyL/ciPExN5H2J7cgb6ca/07QkF+L7QSyFvVBoItldEMXGkHyCtlBAZVDZgtW0e3bhhEF3cW7J6Ovc4mFADN65OslEZYIiF1yUzp+/iRRJpB0kkQ1EOKkFIdEUD2+8="],
+  "nodes": {
+    "eos-01": {
+      "index": "0",
+      "shortname": "eos-01",
+      "longname": "clab-bgp-eos-01",
+      "fqdn": "eos-01.bgp.io",
+      "group": "",
+      "labdir": "/home/alemos/Documents/Projects/ContainerLAB/01_simple_bgp_lab/clab/clab-bgp/eos-01",
+      "kind": "ceos",
+      "image": "ceos:4.33.2F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "192.168.100.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:bb:29:cc",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6794f08eaa3a",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/alemos/Documents/Projects/ContainerLAB/01_simple_bgp_lab/clab/clab-bgp/eos-01",
+        "clab-node-longname": "clab-bgp-eos-01",
+        "clab-node-name": "eos-01",
+        "clab-node-type": "",
+        "clab-owner": "alemos",
+        "clab-topo-file": "/home/alemos/Documents/Projects/ContainerLAB/01_simple_bgp_lab/clab/bgp.clab.yaml",
+        "containerlab": "bgp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "eos-02": {
+      "index": "1",
+      "shortname": "eos-02",
+      "longname": "clab-bgp-eos-02",
+      "fqdn": "eos-02.bgp.io",
+      "group": "",
+      "labdir": "/home/alemos/Documents/Projects/ContainerLAB/01_simple_bgp_lab/clab/clab-bgp/eos-02",
+      "kind": "ceos",
+      "image": "ceos:4.33.2F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "192.168.100.12",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:a2:5e:f7",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6794f08eaa3a",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/alemos/Documents/Projects/ContainerLAB/01_simple_bgp_lab/clab/clab-bgp/eos-02",
+        "clab-node-longname": "clab-bgp-eos-02",
+        "clab-node-name": "eos-02",
+        "clab-node-type": "",
+        "clab-owner": "alemos",
+        "clab-topo-file": "/home/alemos/Documents/Projects/ContainerLAB/01_simple_bgp_lab/clab/bgp.clab.yaml",
+        "containerlab": "bgp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "eos-03": {
+      "index": "2",
+      "shortname": "eos-03",
+      "longname": "clab-bgp-eos-03",
+      "fqdn": "eos-03.bgp.io",
+      "group": "",
+      "labdir": "/home/alemos/Documents/Projects/ContainerLAB/01_simple_bgp_lab/clab/clab-bgp/eos-03",
+      "kind": "ceos",
+      "image": "ceos:4.33.2F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "192.168.100.13",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:06:5d:87",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6794f08eaa3a",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/alemos/Documents/Projects/ContainerLAB/01_simple_bgp_lab/clab/clab-bgp/eos-03",
+        "clab-node-longname": "clab-bgp-eos-03",
+        "clab-node-name": "eos-03",
+        "clab-node-type": "",
+        "clab-owner": "alemos",
+        "clab-topo-file": "/home/alemos/Documents/Projects/ContainerLAB/01_simple_bgp_lab/clab/bgp.clab.yaml",
+        "containerlab": "bgp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "eos-04": {
+      "index": "3",
+      "shortname": "eos-04",
+      "longname": "clab-bgp-eos-04",
+      "fqdn": "eos-04.bgp.io",
+      "group": "",
+      "labdir": "/home/alemos/Documents/Projects/ContainerLAB/01_simple_bgp_lab/clab/clab-bgp/eos-04",
+      "kind": "ceos",
+      "image": "ceos:4.33.2F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "192.168.100.14",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:0d:2d:c3",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6794f08eaa3a",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/alemos/Documents/Projects/ContainerLAB/01_simple_bgp_lab/clab/clab-bgp/eos-04",
+        "clab-node-longname": "clab-bgp-eos-04",
+        "clab-node-name": "eos-04",
+        "clab-node-type": "",
+        "clab-owner": "alemos",
+        "clab-topo-file": "/home/alemos/Documents/Projects/ContainerLAB/01_simple_bgp_lab/clab/bgp.clab.yaml",
+        "containerlab": "bgp"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "eos-01",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:01:94:62",
+        "peer": "z"
+      },
+      "z": {
+        "node": "eos-03",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:18:c8:27",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "eos-02",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:29:0c:64",
+        "peer": "z"
+      },
+      "z": {
+        "node": "eos-03",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:5b:98:60",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "eos-04",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:01:52:63",
+        "peer": "z"
+      },
+      "z": {
+        "node": "eos-03",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:86:af:fb",
+        "peer": "a"
+      }
+    }
+  ]
+}
